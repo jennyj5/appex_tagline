@@ -1,14 +1,14 @@
 import scraperwiki
 from scrapemark import scrape
 import scraperwiki
-data = scraperwiki.scrape("https://www.dropbox.com/s/psex803v7i1lao4/new-getappsurls-result.csv?dl=0")
+data = scraperwiki.scrape("https://www.dropbox.com/s/9h5kjpapd6uh9y3/new-getappsurls-result2.csv?dl=0")
 line = 0
 import csv
 reader = csv.reader(data.splitlines())
 headerline = reader.next()
 for row in reader:
 
-     URL = "https://appexchange.salesforce.com"+row[0]
+     URL = row[0]
      print URL
      html = scraperwiki.scrape(URL)
      print html
