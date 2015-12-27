@@ -8,7 +8,7 @@ reader = csv.reader(data.splitlines())
 headerline = reader.next()
 for row in reader:
 
-     URL = row[0]
+     URL = "https://appexchange.salesforce.com"+row[0]
      print URL
      html = scraperwiki.scrape(URL)
      print html
